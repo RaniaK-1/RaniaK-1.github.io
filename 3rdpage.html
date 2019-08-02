@@ -1,0 +1,128 @@
+<body style="background-color:orange;">
+  <link rel="stylesheet" href="style3.css">
+<h1> RK'S Photography Blog 📸 </h1>
+<hr>
+<a style="text-decoration:italic; color:black;" href="index.html" target="_self">Page 1</a>
+<a style="text-decoration:italic; color:black;" href="2ndpage.html" target="_self">Page 2</a>
+<a style="text-decoration:italic; color:black;" href="4thpage.html" target="_self">Page 4</a>
+<a style="text-decoration:italic; color:black;" href="5thpage.html" target="_self">Page 5</a>
+
+<h2> Nature 🌲
+        </h2>
+
+
+    <p onmouseover="makeRed(this)" onmouseout="makeBlack(this)"> Flowers are the prettiest and sweetest gift of
+       nature which is put to display in spring season.  Among the beautiful
+       objects of nature flowers enjoy the pride of nature.
+       They are a delightful society. They please our eyes and delight our hearts.
+       They are indeed the smile of nature.
+       </p>
+     </body>
+
+   <script>
+     function makeRed(element){
+       element.style = "color:white";
+     }
+
+     function makeBlack(element){
+       element.style = "color:black";
+     }
+
+                </script>
+
+
+                <div id="slideshow" margin:auto>
+                  <div id="slideshow-wrapper" margin:auto>
+                    <img class="mySlides" src="walko.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="walki.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="flower1.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="flower2.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="flower3.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="stone.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="fall.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="waterfall.jpg" style="width:50%" alt="">
+                      <img class="mySlides" src="treey.jpg" style="width:50%" alt="">
+
+
+                  </div>
+                  <div id="slideshow-nav"></div>
+                </div>
+
+
+
+                <embed src="http://dw.convertfiles.com/files/0582553001535402629/ips-79b45112-e522-4689-8d45-1bc53fa490c3.mov" allowfullscreen="true" width="305" height="224">
+
+                <embed src="https://s27.aconvert.com/convert/p3r68-cdx67/lkq47-w33xq.gif" allowfullscreen="true" width="305" height="224">
+
+
+
+
+              <script>
+
+                var Slideshow = {
+              Utils: {
+              siblings: function(element) {
+                var parent = element.parentNode,
+                  childs = parent.childNodes,
+                  sibls = [],
+                  len = childs.length,
+                  i;
+                for (i = 0; i < len; i++) {
+                  var child = childs[i];
+                  if (child.nodeType == 1 && child.tagName.toLowerCase() == 'img' && child !== element) {
+                    sibls.push(child);
+                  }
+                }
+                return sibls;
+              },
+              hideAll: function(elements) {
+                var len = elements.length,
+                  i;
+                for (i = 0; i < len; i++) {
+                  var element = elements[i];
+                  element.className = 'hide';
+
+                }
+              },
+              show: function(element) {
+                element.className = 'show';
+              }
+              },
+              core: {
+              displayNavigation: function() {
+                var images = document.getElementById('slideshow-wrapper').getElementsByTagName('img'),
+                  len = images.length,
+                  i, nav = document.getElementById('slideshow-nav'),
+                  html = '';
+                for (i = 0; i < len; i++) {
+                  html += '<a href="#" data-img="' + i + '">' + (i + 1) + '</a>';
+                }
+                nav.innerHTML = html;
+              },
+              navigate: function() {
+                var links = document.getElementById('slideshow-nav').getElementsByTagName('a'),
+                  len = links.length,
+                  i;
+                for (i = 0; i < len; i++) {
+                  var a = links[i];
+                  a.onclick = function() {
+                    var $i = this.getAttribute('data-img');
+                    var img = document.getElementById('slideshow-wrapper').getElementsByTagName('img')[$i];
+                    Slideshow.Utils.show(img);
+                    var siblings = Slideshow.Utils.siblings(img);
+                    Slideshow.Utils.hideAll(siblings);
+                    return false;
+                  };
+                }
+              }
+              },
+              init: function() {
+              for (var prop in this.core) {
+                if (typeof this.core[prop] === 'function') {
+                  this.core[prop]();
+                }
+              }
+              }
+              };
+              Slideshow.init();
+              </script>

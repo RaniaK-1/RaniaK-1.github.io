@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<body style="background-color:lavender;">
+ <h1> RK'S Photography Blog 📸 </h1>
+<link rel="stylesheet" href="stylesheet.css">
+<a style="text-decoration:italic; color:black;" href="2ndpage.html" target="_self">Page 2</a>
+<a style="text-decoration:italic; color:black;" href="3rdpage.html" target="_self">Page 3</a>
+<a style="text-decoration:italic; color:black;" href="4thpage.html" target="_self">Page 4</a>
+<a style="text-decoration:italic; color:black;" href="5thpage.html" target="_self">Page 5</a>
+
+<hr>
+<button onclick="myFunction()">Click Me</button>
+<div id="myDIV">Hello, click me!</div>
+<head>
+<body>
+  <table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr id="my_identity">
+    <td>Rania</td>
+    <td>Krourou</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+<img src="photo.jpg.png" onclick=turn_ing() id="my-image">
+<script>
+  function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Click Picture!") {
+    x.innerHTML = "After Picture is clicked, refresh the page!!";
+  } else {
+    x.innerHTML = "Click Picture!";
+  }
+}
+</script>
+<script>
+  function f1(elmnt, clr) {
+  elmt.style.color = clr;
+}
+
+function f2(elmnt) {
+  document.getElementById("e2").src = "photo.jpg.png";
+
+}
+
+function turn_ing() {
+	grab_my_image_src = document.getElementById("my-image").src
+
+  if (grab_my_image_src == "camera.jpg.png") {
+  	//window.alert(grab_my_image_src)
+    document.getElementById("my-image").src = "mirror.jpg.png";
+  } else if(grab_my_image_src == "mirror.jpg.png") {
+    //window.alert(grab_my_image_src)
+  } else {
+  	//window.alert(grab_my_image_src)
+    document.getElementById("my-image").src = "mirror.jpg.png";
+    }
+}
+//document.getElementById("my-image").src = "//covers.feedbooks.net/book/3638.jpg?size=large&t=149131204"
+
+</script>
+
+
+</body>
+</html>

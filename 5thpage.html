@@ -1,0 +1,120 @@
+
+<h1> RK'S Photography Blog 📸 </h1>
+<body style="background-color:darkgrey;">
+
+   <hr>
+<h2> The City 🌃 </h2>
+
+<link rel="stylesheet" href="5th.css">
+<a style="text-decoration:italic; color:lightblue;" href="index.html" target="_self">Page 1</a>
+<a style="text-decoration:italic; color:lightblue;" href="2ndpage.html" target="_self">Page 2</a>
+<a style="text-decoration:italic; color:lightblue;" href="3rdpage.html" target="_self">Page 3</a>
+<a style="text-decoration:italic; color:lightblue;" href="4thpage.html" target="_self">Page 4</a>
+ <p onmouseover="makeYo(this)" onmouseout="makeSunc(this)" style="test-indent:25px"> The buildings of the town shone out in a
+        reflected light which gave the city an air of enchantment;
+   and, truly, it is an enchanted spot. New York City is the most fatally
+   fascinating thing in America.</p>
+
+<script>
+   function makeYo(element){
+     element.style = "color:white";
+   }
+
+   function makeSunc(element){
+     element.style = "color:black";
+   }
+   </script>
+     <div id="slideshow" margin:auto;>
+       <div id="slideshow-wrapper" margin:auto;>
+         <img class="mySlides" src="hustler.jpg" style="width:40%" alt="" class="center">
+           <img class="mySlides" src="regal.jpg" style="width:40%" alt="" class="center">
+           <img class="mySlides" src="park.jpg" style="width:40%" alt="">
+           <img class="mySlides" src="car.jpg" style="width:40%" alt="">
+            <img class="mySlides" src="paramount.jpg" style="width:40%" alt="">
+               <img class="mySlides" src="times.jpg" style="width:40%" alt="">
+               <img class="mySlides" src="cabby.jpg" style="width:40%" alt="">
+                <img class="mySlides" src="nightty.jpg" style="width:40%" alt="">
+                   <img class="mySlides" src="cito.jpg" style="width:40%" alt="">
+
+       </div>
+       <div id="slideshow-nav"></div>
+     </div>
+
+ <embed src="http://dw.convertfiles.com/files/0582553001535402629/ips-79b45112-e522-4689-8d45-1bc53fa490c3.mov" allowfullscreen="true" width="305" height="224">
+
+ <embed src="https://s27.aconvert.com/convert/p3r68-cdx67/lkq47-w33xq.gif" allowfullscreen="true" width="305" height="224">
+
+
+
+ <script>
+
+ var Slideshow = {
+ Utils: {
+ siblings: function(element) {
+ var parent = element.parentNode,
+   childs = parent.childNodes,
+   sibls = [],
+   len = childs.length,
+   i;
+ for (i = 0; i < len; i++) {
+   var child = childs[i];
+   if (child.nodeType == 1 && child.tagName.toLowerCase() == 'img' && child !== element) {
+     sibls.push(child);
+   }
+ }
+ return sibls;
+ },
+ hideAll: function(elements) {
+ var len = elements.length,
+   i;
+ for (i = 0; i < len; i++) {
+   var element = elements[i];
+   element.className = 'hide';
+
+ }
+ },
+ show: function(element) {
+ element.className = 'show';
+ }
+ },
+ core: {
+ displayNavigation: function() {
+ var images = document.getElementById('slideshow-wrapper').getElementsByTagName('img'),
+   len = images.length,
+   i, nav = document.getElementById('slideshow-nav'),
+   html = '';
+ for (i = 0; i < len; i++) {
+   html += '<a href="#" data-img="' + i + '">' + (i + 1) + '</a>';
+ }
+ nav.innerHTML = html;
+ },
+ navigate: function() {
+ var links = document.getElementById('slideshow-nav').getElementsByTagName('a'),
+   len = links.length,
+   i;
+ for (i = 0; i < len; i++) {
+   var a = links[i];
+   a.onclick = function() {
+     var $i = this.getAttribute('data-img');
+     var img = document.getElementById('slideshow-wrapper').getElementsByTagName('img')[$i];
+     Slideshow.Utils.show(img);
+     var siblings = Slideshow.Utils.siblings(img);
+     Slideshow.Utils.hideAll(siblings);
+     return false;
+   };
+ }
+ }
+ },
+ init: function() {
+ for (var prop in this.core) {
+ if (typeof this.core[prop] === 'function') {
+   this.core[prop]();
+ }
+ }
+ }
+ };
+ Slideshow.init();
+ </script>
+
+
+                   <hr>
